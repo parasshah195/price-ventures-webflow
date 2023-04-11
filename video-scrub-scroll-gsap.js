@@ -22,7 +22,6 @@ function videoScrubOnScroll() {
     videoEl.play();
     videoEl.pause();
 
-    let frameNumber = 0;
     const videoDuration = videoEl.duration;
     const videoDurationRatio = 100 / videoDuration;
 
@@ -36,7 +35,8 @@ function videoScrubOnScroll() {
         // markers: true,
         onUpdate: (self) => {
           // frame in the video
-          videoEl.currentTime = (self.progress / videoDurationRatio) * 100;
+          videoEl.currentTime =
+            (self.progress.toFixed(3) / videoDurationRatio) * 100;
         },
       },
     });
