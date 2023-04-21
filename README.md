@@ -15,7 +15,7 @@ Note:
 
 - `-filter:v "setpts=0.25*PTS"` speeds up the video duration to a quarter (1/4th) of its current duration
 - The `-crf 30` is the video quality. The lower the number, better the quality. 20-30 is usually considered good enough balance between quality and compression
-- The `scale=1280` is the width of the video. Update the `1280` to the desired width
+- `-b:v 500K` is the bitrate (`500k` stands for 500kb. Higher the bitrate, higher the video quality)
 - `price-ventures-web-loop-compressed.mp4` is the source file. Change the name to the video file name in the folder
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/web-platform-jirmlp)
