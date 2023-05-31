@@ -7,7 +7,7 @@ The FFMPEG CLI code used to achieve that:
 
 `ffmpeg -i price-ventures-web-loop-compressed.mp4 -filter:v "setpts=0.1*PTS" -s 1920x1080 -r 30 -g 1 -movflags faststart -c:v libx264 -b:v 1M -crf 28 -an -pix_fmt yuv420p price-ventures-header-1920w-7s-1mBit-crf28.mp4`
 
-### WebP compression
+### WebM compression
 
 `ffmpeg -i price-ventures-web-loop-compressed.mp4 -filter:v "setpts=0.25*PTS" -s 1280x720 -r 30 -movflags faststart -c:v libvpx-vp9 -b:v 500K -crf 30 -an -g 1 -pix_fmt yuv420p price-ventures-header-1280-encoded.webm`
 
